@@ -2,4 +2,11 @@
 
 {% block content %}
 
+<form method="POST" action="">
+    {% csrf_token %}
+    <p>Are you sure you want to remove "{{obj}}"?</p>
+    <a href="">Go back</a>
+    <input type="submit" value="Confirm">
+</form>
+
 {% endblock content %}
