@@ -83,6 +83,7 @@ def room(request, pk):
             room=room,
             body=request.POST.get("body"),
         )
+        return redirect("room", pk=room.id)
 
     context = {"room": room, "room_messages": room_messages}
     return render(request, "base/room.html", context)
