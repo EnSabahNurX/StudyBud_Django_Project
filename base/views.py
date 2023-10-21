@@ -61,8 +61,10 @@ def home(request):
         Q(topic__name__icontains=q)
         | Q(name__icontains=q)
         | Q(description__icontains=q)
-        | Q(host__icontains=q)
+        | Q(host__username__contains=q)
     )
+    for room in rooms:
+        print(room.host)
     topics = Topic.objects.all()
     rooms_count = rooms.count()
     context = {
