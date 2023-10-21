@@ -2,4 +2,5 @@
 {% block content %}
 <h1>Room {{room.id}}</h1>
 <h4>{{room.name}}</h4>
+<a href="{{request.META.HTTP_REFERER}}">Go back</a>
 {% endblock %}
