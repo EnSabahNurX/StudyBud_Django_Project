@@ -81,15 +81,6 @@
     </header>
     {% include 'navbar.html' %}
 
-    {% block content %}
-
-    {% endblock %}
-    <!-- <script src="script.js"></script> -->
-
-
-
-
-
     {% if messages %}
     <ul class="messages">
         {% for message in messages %}
@@ -98,6 +89,10 @@
     </ul>
     {% endif %}
 
+    {% block content %}
+
+    {% endblock %}
+    <!-- <script src="script.js"></script> -->
 
 </body>
 
