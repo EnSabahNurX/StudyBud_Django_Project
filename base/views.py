@@ -65,10 +65,12 @@ def home(request):
     )
     topics = Topic.objects.all()
     rooms_count = rooms.count()
+    room_messages = Message.objects.all()
     context = {
         "rooms": rooms,
         "topics": topics,
         "rooms_count": rooms_count,
+        "room_messages": room_messages,
     }
     return render(request, "base/index.html", context)
 
