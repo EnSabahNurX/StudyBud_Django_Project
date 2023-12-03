@@ -23,6 +23,6 @@ def getRooms(request):
 
 @api_view(["GET"])
 def getRoom(request, pk):
-    rooms = Room.objects.get(id=pk)
-    serializer = RoomSerializer(rooms, many=False)
+    room = Room.objects.get(id=pk)
+    serializer = RoomSerializer(room, many=False)
     return Response(serializer.data)
