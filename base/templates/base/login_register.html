@@ -41,7 +41,7 @@
 
         <div class="auth__action">
           <p>Haven't signed up yet?</p>
-          <a href="{% url 'login' %}" class="btn btn--link">Sign Up</a>
+          <a href="{% url 'register' %}" class="btn btn--link">Sign Up</a>
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@
     <div class="layout__box">
       <div class="layout__boxHeader">
         <div class="layout__boxTitle">
-          <h3>Login</h3>
+          <h3>Register</h3>
         </div>
       </div>
       <div class="layout__body">
@@ -80,13 +80,13 @@
               </path>
             </svg>
 
-            Login
+            Sing up
           </button>
         </form>
 
         <div class="auth__action">
-          <p>Haven't signed up yet?</p>
-          <a href="{% url 'register' %}" class="btn btn--link">Sign Up</a>
+          <p>Already signed up?</p>
+          <a href="{% url 'login' %}" class="btn btn--link">Login</a>
         </div>
       </div>
     </div>
